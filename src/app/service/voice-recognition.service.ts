@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 
-
-
 declare var webkitSpeechRecognition: any;
 
 @Injectable({
