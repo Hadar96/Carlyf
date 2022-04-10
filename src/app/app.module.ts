@@ -7,12 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpeechToTextComponent } from './components/speech-to-text/speech-to-text.component';
 import { TextToSpeechComponent } from './components/text-to-speech/text-to-speech.component';
+import { HomeComponent } from './components/home/home.component';
+import { BackgroundComponent } from './components/background/background.component';
+import { VoiceCssComponent } from './components/voice-css/voice-css.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SpeechToTextComponent,
-    TextToSpeechComponent
+    TextToSpeechComponent,
+    HomeComponent,
+    BackgroundComponent,
+    VoiceCssComponent
   ],
   imports: [
     BrowserModule,

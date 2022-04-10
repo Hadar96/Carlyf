@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400");
+
+body {
+  background: #2f2f2f;
+}
+
+.background-half-round {
+  width: 300px;
+  height: 150px;
+  background: #232323;
+  margin: auto;
+  border-radius: 300px 300px 0 0;
+  border: 10px solid #f8f8f8;
+  border-bottom: 0;
+  box-shadow: inset 0 2px 5px #151515;
+  position: relative;
+}
+
+.background-half-round:after {
+  content: "";
+  width: 50px;
+  height: 25px;
+  position: absolute;
+  background: #2f2f2f;
+  display: block;
+  top: auto;
+  bottom: 0;
+  border-radius: 50px 50px 0 0;
+  box-shadow: inset 0px 3px 5px 0px #151515;
+
+  z-index: 5;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.speed-number-wapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.speed-number {
+  color: #fff;
+  font-family: "Roboto";
+}
+.speed-number span:after {
+  content: "";
+  width: 2px;
+  height: 5px;
+  background: #fff;
+  position: relative;
+}
+
+.speed-0,
+.speed-20,
+.speed-40,
+.speed-80,
+.speed-100,
+.speed-120 {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+}
+.speed-0 span {
+  padding: 0px 0px 0px 5px;
+}
+
+.speed-20 {
+  transform: rotate(30deg);
+  transform-origin: 100% 0%;
+}
+
+.speed-20 span {
+  transform: rotate(-30deg);
+  display: inline-block;
+  padding: 15px 0px 0px 15px;
+}
+
+.speed-40 {
+  transform: rotate(60deg);
+  transform-origin: 100% 0%;
+}
+.speed-40 span {
+  transform: rotate(-60deg);
+  display: inline-block;
+  padding: 0px 0px 0px 20px;
+}
+
+.speed-60 {
+  margin: auto;
+  text-align: center;
+}
+
+.speed-80 {
+  transform: rotate(120deg);
+  transform-origin: 100% 0%;
+}
+
+.speed-80 span {
+  transform: rotate(-120deg);
+  display: inline-block;
+  padding: 0px 20px 0px 20px;
+}
+
+.speed-100 {
+  transform: rotate(150deg);
+  transform-origin: 100% 25%;
+}
+
+.speed-100 span {
+  transform: rotate(-150deg);
+  display: inline-block;
+  padding: 0px 15px 0px 15px;
+  color: #ff4141;
+  font-weight: bold;
+}
+
+.speed-120 {
+  transform: rotate(180deg);
+  transform-origin: 100% 50%;
+}
+
+.speed-120 span {
+  transform: rotate(-180deg);
+  display: inline-block;
+  padding: 0px 5px 0px 0px;
+  color: #ff4141;
+  font-weight: bold;
+}
+
+.dashboard-icon{
+  width:20px;
+}
+
+.dashboard-icon svg{
+  fill: #4b4b4b;
+    position: absolute;
+    max-width: 45px;
+    margin: auto;
+    bottom: 15px;
+    left: 70px;
+}
+
+.dashboard-icon svg:hover{
+  fill: #ff4141;
+}
+
+
+/*指針*/
+.pointer {
+  background: #ffa500;
+  width: 8px;
+  height: 140px;
+  border-radius: 10px;
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg); /*IE 9*/
+  -ms-transform-orgin: 50% 100%; /*IE 9*/
+  -webkit-transform: rotate(-90deg); /*safari 3-8*/
+  -webkit-transform-orgin: 50% 100%; /*safari 3-8*/
+  margin: auto;
+  transform-origin: 50% 100%;
+}
+
+.speed-ani {
+  animation: speeding  5s infinite alternate;
+}
+
+@keyframes speeding {
+  0% {
+    transform: rotate(-90deg);
+  }
+  5% {
+    transform: rotate(-85deg);
+  }
+  80% {
+    transform: rotate(80deg);
+  }
+  85% {
+    transform: rotate(85deg);
+  }
+  90% {
+    transform: rotate(80deg);
+  }
+  95% {
+    transform: rotate(90deg);
+  }
+  97% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(92deg);
+  }
+}

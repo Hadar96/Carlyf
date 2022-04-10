@@ -1,0 +1,19 @@
+html, body {
+	margin:0;
+	height: 100%;
+	width:100%;
+	
+}
+
+body {
+	
+	/* background-color: #cccccc;
+	background-image: url("../../media/examples/lizard.png"); */
+}
+
+.button {
+	height: 250px;
+	width: 250px;
+	background: none;
+    border: none;
+}

@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    background-image: url("assets/imgs/1808239.png");
+}
