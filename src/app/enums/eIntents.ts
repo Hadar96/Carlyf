@@ -1,0 +1,12 @@
+export enum eIntents {
+    GENERAL_TALK,
+    EMERGENCY,
+    EMERGENCY_CONTACT,
+    VOLUME_UP,
+    VOLUME_DOWN,
+    PLAY_MUSIC,
+    STOP_MUSIC,
+    ETA,
+    NAVIGATE_HOME,
+    UNDEFINED
+}

@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpeechToTextComponent } from './components/speech-to-text/speech-to-text.component';
 import { TextToSpeechComponent } from './components/text-to-speech/text-to-speech.component';
+import { BotComponent } from './components/bot/bot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SpeechToTextComponent,
-    TextToSpeechComponent
+    TextToSpeechComponent,
+    BotComponent
   ],
   imports: [
     BrowserModule,
