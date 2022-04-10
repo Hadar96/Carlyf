@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
+
 
 
 declare var webkitSpeechRecognition: any;
@@ -15,6 +17,8 @@ export class VoiceRecognitionService {
   public text$: Subject<string> = new Subject<string>();
   tempWords: any;
 
+  public userMsg$: BehaviorSubject<string> = new BehaviorSubject<string>("");
+
   constructor() { }
 
   init() {
@@ -29,6 +33,8 @@ export class VoiceRecognitionService {
         .join('');
       this.tempWords = transcript;
       console.log(transcript);
+
+      this.userMsg$.next(transcript);
     });
   }
 
