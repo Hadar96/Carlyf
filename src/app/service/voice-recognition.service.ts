@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 
 declare var webkitSpeechRecognition: any;
@@ -8,10 +9,11 @@ declare var webkitSpeechRecognition: any;
 })
 export class VoiceRecognitionService {
 
- recognition =  new webkitSpeechRecognition();
+  recognition = new webkitSpeechRecognition();
   isStoppedSpeechRecog = false;
   public text = '';
-  tempWords:any;
+  public text$: Subject<string> = new Subject<string>();
+  tempWords: any;
 
   constructor() { }
 
@@ -20,10 +22,10 @@ export class VoiceRecognitionService {
     this.recognition.interimResults = true;
     this.recognition.lang = 'en-US';
 
-    this.recognition.addEventListener('result', (e:any) => {
+    this.recognition.addEventListener('result', (e: any) => {
       const transcript = Array.from(e.results)
-        .map((result:any) => result[0])
-        .map((result:any) => result.transcript)
+        .map((result: any) => result[0])
+        .map((result: any) => result.transcript)
         .join('');
       this.tempWords = transcript;
       console.log(transcript);
@@ -34,7 +36,7 @@ export class VoiceRecognitionService {
     this.isStoppedSpeechRecog = false;
     this.recognition.start();
     console.log("Speech recognition started")
-    this.recognition.addEventListener('end', (condition:any) => {
+    this.recognition.addEventListener('end', (condition: any) => {
       if (this.isStoppedSpeechRecog) {
         this.recognition.stop();
         console.log("End speech recognition")
@@ -48,7 +50,8 @@ export class VoiceRecognitionService {
     this.isStoppedSpeechRecog = true;
     this.wordConcat()
     this.recognition.stop();
-    console.log("End speech recognition")
+    console.log("End speech recognition");
+    this.text$.next(this.text);
   }
 
   wordConcat() {

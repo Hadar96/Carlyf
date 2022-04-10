@@ -4,9 +4,8 @@ import { StoreService } from "./store.service";
 
 @Injectable()
 export class ClassifierService {
-    store: StoreService;
 
-    constructor(store: StoreService) { }
+    constructor(private store: StoreService) { }
 
     classifyText(text: String): eIntents {
         text = text.toLowerCase();

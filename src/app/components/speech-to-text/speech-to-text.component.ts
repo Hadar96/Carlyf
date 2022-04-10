@@ -4,26 +4,25 @@ import { VoiceRecognitionService } from '../../service/voice-recognition.service
 @Component({
   selector: 'app-speech-to-text',
   templateUrl: './speech-to-text.component.html',
-  styleUrls: ['./speech-to-text.component.sass'],
-  providers: [VoiceRecognitionService]
+  styleUrls: ['./speech-to-text.component.sass']
 })
 export class SpeechToTextComponent implements OnInit {
 
 
   constructor(
-    public service : VoiceRecognitionService
-  ) { 
+    public service: VoiceRecognitionService
+  ) {
     this.service.init()
-   }
+  }
 
   ngOnInit(): void {
   }
 
-  startService(){
+  startService() {
     this.service.start()
   }
 
-  stopService(){
+  stopService() {
     this.service.stop()
   }
 
