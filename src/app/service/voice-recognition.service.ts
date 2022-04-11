@@ -46,7 +46,7 @@ export class VoiceRecognitionService {
       this.timer$?.remove();
       this.timer$ = setTimeout(() => { this.store.isActive = false; }, 5000);
 
-      this.userMsg$.next(transcript); 
+      this.userMsg$.next(transcript);
     });
   }
 
