@@ -1,0 +1,29 @@
+[
+	{
+		"name": "soffia",
+		"nickName": "ginger",
+		"awakenessNotification": "true",
+		"awakenessNotificationInterval": "30",
+		"spotifyList": "rock",
+		"temperature": "20",
+		"emergencyContact": "0525625171"
+	},
+	{
+		"name": "matan",
+		"nickName": "ginger",
+		"awakenessNotification": "true",
+		"awakenessNotificationInterval": "30",
+		"spotifyList": "rock",
+		"temperature": "20",
+		"emergencyContact": "0525625171"
+	},
+	{
+		"name": "hadar",
+		"nickName": "ginger",
+		"awakenessNotification": "true",
+		"awakenessNotificationInterval": "30",
+		"spotifyList": "rock",
+		"temperature": "20",
+		"emergencyContact": "0525625171"
+	}
+]

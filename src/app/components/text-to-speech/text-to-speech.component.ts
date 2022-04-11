@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SpeechSynthesisService } from '../../service/speech-synthesis.service';
 
 @Component({
@@ -6,13 +6,10 @@ import { SpeechSynthesisService } from '../../service/speech-synthesis.service';
   templateUrl: './text-to-speech.component.html',
   styleUrls: ['./text-to-speech.component.sass']
 })
-export class TextToSpeechComponent implements OnInit {
+export class TextToSpeechComponent {
 
   public textValue: any;
   constructor(public speechSynthesisService: SpeechSynthesisService) { }
-
-  ngOnInit(): void {
-  }
 
   speak() {
     this.textValue = "hey my name is carly";
