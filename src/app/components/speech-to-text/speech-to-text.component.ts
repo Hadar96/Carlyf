@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injector } from '@angular/core';
 import { VoiceRecognitionService } from '../../service/voice-recognition.service'
+import { UsersListService } from 'app/service/users-list.service';
 
 @Component({
   selector: 'app-speech-to-text',
@@ -7,17 +8,15 @@ import { VoiceRecognitionService } from '../../service/voice-recognition.service
   styleUrls: ['./speech-to-text.component.sass'],
   providers: [VoiceRecognitionService]
 })
-export class SpeechToTextComponent implements OnInit {
+export class SpeechToTextComponent {
 
 
   constructor(
-    public service : VoiceRecognitionService
+    public service : VoiceRecognitionService,
+    public usersService:UsersListService
   ) { 
     this.service.init()
    }
-
-  ngOnInit(): void {
-  }
 
   startService(){
     this.service.start()
@@ -26,5 +25,4 @@ export class SpeechToTextComponent implements OnInit {
   stopService(){
     this.service.stop()
   }
-
 }
