@@ -15,7 +15,7 @@ export class TextToSpeechComponent implements OnInit {
   }
 
   speak() {
-    this.textValue = "hello world";
+    this.textValue = "hey my name is carly";
     this.speechSynthesisService.speak(this.textValue)
   }
 
