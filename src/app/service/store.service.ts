@@ -6,6 +6,7 @@ export class StoreService {
     constructor() { }
 
     isInAction: boolean = false;
+    isActive: boolean = false;
     isMusicOn: boolean = false;
     isNavigating: boolean = false;
     currVolume: number = 10;

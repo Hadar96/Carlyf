@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject, timeout } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
+import { StoreService } from './store.service';
 
 declare var webkitSpeechRecognition: any;
 
@@ -17,7 +18,9 @@ export class VoiceRecognitionService {
 
   public userMsg$: BehaviorSubject<string> = new BehaviorSubject<string>("");
 
-  constructor() { }
+  private timer$: any;
+
+  constructor(private store: StoreService) { }
 
   init() {
 
@@ -31,6 +34,17 @@ export class VoiceRecognitionService {
         .join('');
       this.tempWords = transcript;
       console.log(transcript);
+
+      if (transcript.toLocaleLowerCase() === "hey carly") {
+        this.store.isActive = true;
+        // this.timer$?.remove();
+        this.timer$ = setTimeout(() => { this.store.isActive = false; }, 5000);
+      }
+
+      if (!this.store.isActive) return;
+
+      this.timer$?.remove();
+      this.timer$ = setTimeout(() => { this.store.isActive = false; }, 5000);
 
       this.userMsg$.next(transcript);
     });

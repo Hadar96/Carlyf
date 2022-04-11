@@ -22,8 +22,8 @@ export class SpeechSynthesisService {
 
     utter.voice = this.voices[5];
     window.speechSynthesis.cancel(); // this needs to be here without it does not work
-    this.isTalking$.next(true);
     window.speechSynthesis.speak(utter);
+    this.isTalking$.next(true);
     this.isStillTalking();
   }
 
