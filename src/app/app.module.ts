@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { MatTabsModule } from '@angular/material/tabs';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,18 +12,25 @@ import { BotComponent } from './components/bot/bot.component';
 import { ClassifierService } from './service/classifier.service';
 import { StoreService } from './service/store.service';
 import { IntentPerformer } from './service/intent-performer.service';
+import { HomeComponent } from './components/home/home.component';
+import { BackgroundComponent } from './components/background/background.component';
+import { VoiceCssComponent } from './components/voice-css/voice-css.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SpeechToTextComponent,
     TextToSpeechComponent,
-    BotComponent
+    BotComponent,
+    HomeComponent,
+    BackgroundComponent,
+    VoiceCssComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatTabsModule
+    MatTabsModule,
+    MatIconModule
   ],
   providers: [
     StoreService,
