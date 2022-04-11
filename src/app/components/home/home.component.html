@@ -1,0 +1,10 @@
+<div class="console">
+    <div class="header">
+        <button class="button" (click)="toggle()">
+            <mat-icon *ngIf="isRunnig" class="icon-display"> mic_off </mat-icon>
+            <mat-icon *ngIf="!isRunnig" class="icon-display"> mic </mat-icon>
+        </button>
+        <img src="../../../assets/imgs/Carly-logos_transparent.png" height="300" width="300" />
+    </div>
+    <app-voice-css></app-voice-css>
+</div>

@@ -12,7 +12,7 @@ export class TextToSpeechComponent {
   constructor(public speechSynthesisService: SpeechSynthesisService) { }
 
   speak() {
-    this.textValue = "hello world";
+    this.textValue = "hey my name is carly";
     this.speechSynthesisService.speak(this.textValue)
   }
 

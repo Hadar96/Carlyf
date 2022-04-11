@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+   /* background: url("assets/imgs/3d-car-background-gualtiero-boffi.jpg")  no-repeat center center fixed;  */
+    /* background-color: black; */
+}
