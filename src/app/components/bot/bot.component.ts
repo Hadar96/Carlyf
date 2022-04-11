@@ -27,7 +27,7 @@ export class BotComponent implements OnInit {
   listenToUser() {
     this.stt.text$.pipe(
       map(text => this.classifier.classifyText(text)),
-      tap(intent => console.log("yoooooooooo", intent)),
+      // tap(intent => console.log("yoooooooooo", intent)),
       map(intent => this.performer.responseToIntent(intent)),
       map(res => this.tts.speak(res.text))
     ).subscribe(res => { });

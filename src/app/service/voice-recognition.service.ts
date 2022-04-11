@@ -37,6 +37,7 @@ export class VoiceRecognitionService {
   }
 
   start() {
+    this.text = '';
     this.isStoppedSpeechRecog = false;
     this.recognition.start();
     console.log("Speech recognition started")

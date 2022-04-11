@@ -1,4 +1,5 @@
 export enum eIntents {
+    GREET,
     GENERAL_TALK,
     EMERGENCY,
     EMERGENCY_CONTACT,
