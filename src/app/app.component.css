@@ -2,6 +2,10 @@
     height: 100%;
     position: fixed;
     width: 100%;
-    background-image: url("../assets/imgs/1808239.png");
+    align-items: center;
+    display: flex;
+    /* align-content: center; */
+    justify-content: center;
+    /* background-image: url("../assets/imgs/1808239.png"); */
 }
 

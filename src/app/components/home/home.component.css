@@ -5,15 +5,25 @@ html, body {
 	
 }
 
-body {
-	
-	/* background-color: #cccccc;
-	background-image: url("../../media/examples/lizard.png"); */
+.header {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .button {
-	height: 250px;
-	width: 250px;
+	height: 40px;
+	width: 30px;
 	background: none;
     border: none;
+}
+
+.console {
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+	height: 400px;
+    width: 700px;
+	background-color: grey;
+    border-radius: 10px;
 }

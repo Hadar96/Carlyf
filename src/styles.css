@@ -5,5 +5,6 @@ body {
     height: 100%;
     position: fixed;
     width: 100%;
-    background-image: url("assets/imgs/1808239.png");
+   /* background: url("assets/imgs/3d-car-background-gualtiero-boffi.jpg")  no-repeat center center fixed;  */
+    /* background-color: black; */
 }

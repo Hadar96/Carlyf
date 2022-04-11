@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpeechSynthesisService } from '../../service/speech-synthesis.service';
 
 @Component({
   selector: 'app-voice-css',
@@ -9,9 +10,12 @@ export class VoiceCssComponent implements OnInit {
 
   public isTalking = false;
 
-  constructor() { }
+  constructor(public speechSynthesisService: SpeechSynthesisService) { }
 
   ngOnInit(): void {
+    this.speechSynthesisService.isTalking$.subscribe(value => {
+      this.isTalking = value;
+    })
   }
 
 }
