@@ -23,7 +23,7 @@ html, body {
     display: flex;
     flex-direction: column;
 	height: 500px;
-    width: 700px;
+    width: 800px;
 	/* background-color: grey; */
 	background: url("../../../assets/imgs/aVllqgy-free-metal-wallpaper.jpg") ;
 	background-size: auto 100%;
