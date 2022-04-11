@@ -22,8 +22,15 @@ html, body {
 	align-items: center;
     display: flex;
     flex-direction: column;
-	height: 400px;
+	height: 500px;
     width: 700px;
-	background-color: grey;
+	/* background-color: grey; */
+	background: url("../../../assets/imgs/aVllqgy-free-metal-wallpaper.jpg") ;
+	background-size: auto 100%;
+    background-repeat: no-repeat;
     border-radius: 10px;
 }
+
+.icon-display {
+	transform: scale(2);
+ }

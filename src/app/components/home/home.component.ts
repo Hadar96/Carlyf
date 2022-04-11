@@ -9,7 +9,7 @@ import { VoiceRecognitionService } from '../../service/voice-recognition.service
 })
 export class HomeComponent implements OnInit {
 
-  private isRunnig = false;;
+  public isRunnig = false;;
 
   constructor(public voiceRecognitionService: VoiceRecognitionService) { }
 
